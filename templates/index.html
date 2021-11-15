@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% block content%}
+<section class="hero is-large ">
+    <div class="hero-body">
+        <p class="title">
+            Dive into your music habits
+          </p>
+          <p class="subtitle">
+            {% if session["user"] %}
+
+            <a href={{button_url}}>
+                <button class="button is-primary">{{button_text}}</button>
+            </a>
+            {% else %}
+            <a href={{auth_url}}>
+                <button class="button is-primary">Sign in to enjoy the site!</button>
+            </a>
+            
+            {% endif %}
+          </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h1 class="title">FEATURES</h1>
+    <div class="columns">
+      <div class="column">
+        <div class="card">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title">
+                  TRACKS
+                </p>
+              </a>
+              </div>
+            </div>
+            <!-- Bottom button for artist-->
+            <div class="content">
+              <p class="subtitle">
+                Check out your favorite tracks by time-range, and create a playlist!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title">
+                  GENRES
+                </p>
+              </a>
+              </div>
+            </div>
+            <!-- Bottom button for artist-->
+            <div class="content">
+              <p class="subtitle">
+                Take a look at your favorite genres!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title">
+                  ARTISTS
+                </p>
+              </a>
+              </div>
+            </div>
+            <!-- Bottom button for artist-->
+            <div class="content">
+              <p class="subtitle">
+                Take a look at which artists you listened to the most, in a given time-period!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title">
+                  RECENT
+                </p>
+              </a>
+              </div>
+            </div>
+            <!-- Bottom button for artist-->
+            <div class="content">
+              <p class="subtitle">
+                Take a look at what you recently listened to!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+{% endblock%}
